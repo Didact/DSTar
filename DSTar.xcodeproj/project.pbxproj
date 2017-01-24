@@ -10,6 +10,7 @@
 		1DCC36271E3723F800DA39D5 /* DSTar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DCC361D1E3723F800DA39D5 /* DSTar.framework */; };
 		1DCC362C1E3723F800DA39D5 /* DSTarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCC362B1E3723F800DA39D5 /* DSTarTests.swift */; };
 		1DCC362E1E3723F800DA39D5 /* DSTar.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DCC36201E3723F800DA39D5 /* DSTar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1DCC36381E37257700DA39D5 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCC36371E37257700DA39D5 /* Header.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		1DCC36261E3723F800DA39D5 /* DSTarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DSTarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DCC362B1E3723F800DA39D5 /* DSTarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSTarTests.swift; sourceTree = "<group>"; };
 		1DCC362D1E3723F800DA39D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1DCC36371E37257700DA39D5 /* Header.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			children = (
 				1DCC36201E3723F800DA39D5 /* DSTar.h */,
 				1DCC36211E3723F800DA39D5 /* Info.plist */,
+				1DCC36371E37257700DA39D5 /* Header.swift */,
 			);
 			path = DSTar;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 					1DCC361C1E3723F800DA39D5 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = SQMM52Z2T8;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					1DCC36251E3723F800DA39D5 = {
@@ -198,6 +202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1DCC36381E37257700DA39D5 /* Header.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +327,7 @@
 		1DCC36321E3723F800DA39D5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = SQMM52Z2T8;
@@ -334,6 +340,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.didact.DSTar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -341,6 +348,7 @@
 		1DCC36331E3723F800DA39D5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = SQMM52Z2T8;
@@ -360,6 +368,7 @@
 		1DCC36351E3723F800DA39D5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = SQMM52Z2T8;
 				INFOPLIST_FILE = DSTarTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -372,6 +381,7 @@
 		1DCC36361E3723F800DA39D5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = SQMM52Z2T8;
 				INFOPLIST_FILE = DSTarTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -400,6 +410,7 @@
 				1DCC36331E3723F800DA39D5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1DCC36341E3723F800DA39D5 /* Build configuration list for PBXNativeTarget "DSTarTests" */ = {
 			isa = XCConfigurationList;
@@ -408,6 +419,7 @@
 				1DCC36361E3723F800DA39D5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
