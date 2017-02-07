@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D86DFA11E4A4B5300047915 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D86DFA01E4A4B5300047915 /* Extensions.swift */; };
 		1DCC36271E3723F800DA39D5 /* DSTar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DCC361D1E3723F800DA39D5 /* DSTar.framework */; };
 		1DCC362C1E3723F800DA39D5 /* DSTarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DCC362B1E3723F800DA39D5 /* DSTarTests.swift */; };
 		1DCC362E1E3723F800DA39D5 /* DSTar.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DCC36201E3723F800DA39D5 /* DSTar.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -24,6 +25,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D86DFA01E4A4B5300047915 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = DSTar/Extensions.swift; sourceTree = "<group>"; };
 		1DCC361D1E3723F800DA39D5 /* DSTar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DSTar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DCC36201E3723F800DA39D5 /* DSTar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DSTar.h; sourceTree = "<group>"; };
 		1DCC36211E3723F800DA39D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -55,6 +57,7 @@
 		1DCC36131E3723F800DA39D5 = {
 			isa = PBXGroup;
 			children = (
+				1D86DFA01E4A4B5300047915 /* Extensions.swift */,
 				1DCC361F1E3723F800DA39D5 /* DSTar */,
 				1DCC362A1E3723F800DA39D5 /* DSTarTests */,
 				1DCC361E1E3723F800DA39D5 /* Products */,
@@ -203,6 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DCC36381E37257700DA39D5 /* Header.swift in Sources */,
+				1D86DFA11E4A4B5300047915 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
