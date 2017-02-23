@@ -82,9 +82,23 @@ extension Header {
         
         return Header(name: name, mode: mode, owner: owner, group: group, size: size, lastModified: lastModified, checksum: checksum, type: type, linkedName: linkedName)
     }
+    
+    static func from(data: MutableRandomAccessSlice<Data>) -> Header? {
+        return Header.from(data: Data(data))
+    }
 }
 
 struct File {
     let header: Header
-    let contets: Data
+    let contents: Data
+}
+
+extension File {
+    static func from(data: Data) -> File? {
+        guard let header = Header.from(data: data[0..<512]) else {
+            return nil
+        }
+        let content = Data(data[512..<(512 + header.size)])
+        return File(header: header, contents: content)
+    }
 }
