@@ -48,3 +48,9 @@ extension String {
         return String(self.characters.prefix(while: {$0 != Character("\0")}))
     }
 }
+
+extension Data {
+    func asString() -> String? {
+        return String(data: self, encoding: .utf8)
+    }
+}

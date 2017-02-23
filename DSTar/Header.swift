@@ -102,3 +102,29 @@ extension File {
         return File(header: header, contents: content)
     }
 }
+
+struct Archive {
+    let files: [File]
+}
+
+extension Archive {
+    static func from(data: Data) -> Archive? {
+        var startIndex = 0
+        var files = [File]()
+        
+        let blocks = stride(from: 0, to: data.count, by: 512).map({data[$0..<$0+512]})
+        
+        while startIndex < blocks.count {
+            guard blocks[startIndex].contains(where: {$0 != 0}) else {
+                break
+            }
+            let header = Header.from(data: blocks[startIndex])!
+            let count = (header.size / 512) + 1
+            let contents = blocks[startIndex+1..<(startIndex+1 + count)].joined().prefix(header.size)
+            files.append(File(header: header, contents: Data(contents)))
+            startIndex += count + 1
+        }
+        
+        return Archive(files: files)
+    }
+}
